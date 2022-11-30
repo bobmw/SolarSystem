@@ -1,10 +1,9 @@
 import { useTexture } from "@react-three/drei";
-import { useRef } from "react";
+import { forwardRef } from "react";
 import { starsConfig } from "../config/stars.config";
 
-export default function Sun() {
+const  Sun = forwardRef((_, ref) => {
   const { size, texture } = starsConfig.sun;
-  const ref = useRef();
   const props = useTexture({
     map: texture
   });
@@ -12,7 +11,9 @@ export default function Sun() {
   return (
     <mesh ref={ref}>
       <sphereGeometry args={[size]} />
-      <meshPhongMaterial {...props}/>
+      <meshBasicMaterial {...props}/>
     </mesh>
   );
-}
+});
+
+export default Sun;
