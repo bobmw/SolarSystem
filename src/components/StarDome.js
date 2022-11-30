@@ -11,7 +11,7 @@ export default function StarDome() {
 
   return(
 <>
-  <color attach="background" args={["#232323"]} />
+  <color attach="background" args={["black"]} />
         <Stars
           radius={200}
           depth={0}
