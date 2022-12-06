@@ -11,7 +11,7 @@ export default function Contacts() {
     },
     {
       label: 'GitHub',
-      path: 'https://github.com/bob-mw',
+      path: 'https://github.com/bobmw',
       icon: <GitHub />
     }
   ];
